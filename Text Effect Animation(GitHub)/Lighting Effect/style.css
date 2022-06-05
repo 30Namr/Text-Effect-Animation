@@ -1,0 +1,37 @@
+body {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.light {
+    color: white;
+    font-size: 5rem;
+    text-shadow: 0 0 2px orangered;
+    padding: 0 1em;
+    position: relative;
+}
+
+.light::after {
+    content: '[Hello Bestie]';
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 1em;
+    z-index: -1;
+    color: magenta;
+    filter: blur(.8rem);
+}
+
+.light::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    color: magenta;
+    filter: blur(2.5rem);
+  
+}
