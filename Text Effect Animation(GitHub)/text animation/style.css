@@ -1,0 +1,52 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:  linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+.rotating-text{
+    font-family: monospace;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: white;
+    transform: translateX(-80px);
+}
+.rotating-text p{
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+}
+.rotating-text p .word{
+    position: absolute;
+    display: flex;
+    opacity: 0;
+}
+.rotating-text p .word .letter {
+    transform-origin: center center 25px;
+}
+.rotating-text p .word .letter.out{
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6,0,0.7,0.2);
+}
+.rotating-text p .word .letter.in{
+    transition: 0.38s ease;
+}
+.rotating-text p .word .letter.behind{
+    transform: rotateX(-90deg);
+}
+.red{
+    color:red
+}
+.purple{
+    color:purple
+}
+.blue{
+    color:darkblue
+}
+.green{
+    color:green
+}
+.yellow{
+    color:yellow
+}
